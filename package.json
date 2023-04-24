@@ -4,6 +4,7 @@
   "description": "",
   "main": "lib/index.js",
   "typings": "types/index.d.ts",
+  "sideEffects": false,
   "scripts": {
     "dev": "npx webpack serve",
     "build": "npm run test & npm run generate:esm & npm run generate:umd",
@@ -11,10 +12,17 @@
     "generate:esm": "cross-env NODE_ENV=production OUTPUT_TYPE=esm webpack --config ./webpack.config.js",
     "test": "jest ./src/calc/index.test.ts"
   },
-  
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wujunhong2000/tool-fun-test.git"
+  },
   "keywords": [],
-  "author": "",
+  "author": "wujunhong2000",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wujunhong2000/tool-fun-test/issues"
+  },
+  "homepage": "https://github.com/wujunhong2000/tool-fun-test#readme",
   "devDependencies": {
     "@babel/core": "^7.21.4",
     "@babel/preset-env": "^7.21.4",
